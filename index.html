@@ -1,40 +1,43 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-<title>editor</title>
+   <title>editor</title>
 </head>
+
 <body>
-<a href="javascript:;">Link</a>
-<a href="javascript:;">newline</a>
-<input type="color" id="color" />
-<button id="b">B</button>
-<button id="i">I</button>
-<button id="u">U</button>
-<script>
-document.getElementsByTagName("a")[0].onclick=function(){
-url=prompt("Enter Link url:");
-content=prompt("Enter Link Content:\n");
-var l=document.createElement("a");
-l.setAttribute("href",url);
-l.innerHTML=content;
-document.getElementsByTagName("div")[0].appendChild(l)
-}
-document.getElementsByTagName("a")[1].onclick=function(){
-document.getElementsByTagName("div")[0].innerHTML += "<br/ >"
-}
-document.getElementById("color").onchange=function(e){
-e = e || window.event;
-color=e.target.value;
-ele=document.createElement("span")
-ele.style.color=color
-do{
-ele.innerHTML=prompt()
-}while(!ele.innerHTML)
-document.getElementsByTagName("div")[0].appendChild(ele)
-}
+   <a href="javascript:;">Link</a>
+   <a href="javascript:;">newline</a>
+   <input type="color" id="color" />
+   <button id="b">B</button>
+   <button id="i">I</button>
+   <button id="u">U</button>
+   <script>
+      document.getElementsByTagName("a")[0].onclick = function () {
+         url = prompt("Enter Link url:");
+         content = prompt("Enter Link Content:\n");
+         var l = document.createElement("a");
+         l.setAttribute("href", url);
+         l.innerHTML = content;
+         document.getElementsByTagName("div")[0].appendChild(l)
+      }
+      document.getElementsByTagName("a")[1].onclick = function () {
+         document.getElementsByTagName("div")[0].innerHTML += "<br/ >"
+      }
+      document.getElementById("color").onchange = function (e) {
+         e = e || window.event;
+         color = e.target.value;
+         ele = document.createElement("span")
+         ele.style.color = color
+         do {
+            ele.innerHTML = prompt()
+         } while (!ele.innerHTML)
+         document.getElementsByTagName("div")[0].appendChild(ele)
+      }
 
-</script>
-<div contenteditable style="background-color:rgb(215,215,215) !important;
-   font-family:Monaco,'SF Mono' !important;"></div></body>
+   </script>
+   <div contenteditable style="background-color:rgb(215,215,215) !important;
+   font-family:Monaco,'SF Mono' !important;"></div>
+</body>
+
 </html>
-
